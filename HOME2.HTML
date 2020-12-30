@@ -1,0 +1,142 @@
+<html>
+<link href="HOME2.css" rel="stylesheet">
+<head>
+<title>HOME</title>
+</head>
+<body text="white">
+
+<h1  class="head" style:"margin-top:0px"><b><marquee width=60% direction="up" scrollamount="3">WELCOME TO <u> sportzilla</u> SPORTS ACADEMY</marquee></b> 
+<ul class="breadcrumb">
+  <li><a href="home2.html">HOME</a></li>
+  <li><a href="http://localhost/project/adm1.php">APPLY NOW</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+</ul>
+ </h1>
+
+
+<br>
+<br>
+<div class="navbar">
+
+ <div class="dropdown">
+    <button class="dropbtn">  ACADEMY
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="msg.html">FOUNDER'S MESSAGE</a>
+      <a href="coach.html">COACHES</a>
+      <a href="map.html">MAP</a>
+    </div>
+  </div> 
+
+<a href="infrastructure.html">INFRASTRUCTURE</a>
+<a href="http://localhost/project/adm1.php" class="active">ADMISSIONS</a>
+<a href="gallery1.html">GALLERY</a>
+<a href="achieve.html">ACHIEVEMENTS</a>
+</div>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit" src="h1.jpg" >
+  <div class="text">basketball</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit" src="h2.jpg" >
+  <div class="text">chess</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit" src="h3.jpg" >
+  <div class="text">football</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit" src="h4.jpg">
+  <div class="text">hockey</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit" src="h5.jpg">
+  <div class="text">practice session</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit" src="pic.jpg">
+  <div class="text">matches</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div style="padding:15px 15px 2500px;font-size:40px;font-family:berlin sans fb;">
+ <p>
+<center>Sportzilla Academy is a home to the aspiring players who have endeavored to touch
+ the sky of success through the zest in their efforts. This academy is a fuel to 
+all those athletes to light up their lives with their passions. Its not just a 
+mere passion for an athlete to pursue and achieve their goal, rather it is the 
+oxygen which gives them life.
+We have the best faculty and infrastructure here to manifest the students with best opportunities and better exposure.
+</center>
+</p> 
+</div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+}
+</script>
+
+</body>
+</html>
